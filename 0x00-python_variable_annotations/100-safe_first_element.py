@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
-
-from typing import Any, Union, List
-
-
-def safe_first_element(lst: List[Any]) -> Union[Any, None]:
-    """
+"""
     Returns the first element of a list if it exists, otherwise returns None.
 
     Args:
@@ -13,7 +8,13 @@ def safe_first_element(lst: List[Any]) -> Union[Any, None]:
     Returns:
         Union[Any, None]: The first element of the list if it exists,
         otherwise None.
-    """
+"""
+import typing
+
+
+def safe_first_element(lst: typing.Sequence[typing.Any]) -> \
+        typing.Union[typing.Any, None]:
+    """Duck-typed annotation"""
     if lst:
         return lst[0]
     else:
