@@ -8,6 +8,8 @@ and eventually returns it.
 import asyncio
 import random
 
+random.seed(0)
+
 async def wait_random(max_delay: float = 10) -> float:
     """
     Asynchronous coroutine that waits for a random delay between 0
@@ -26,5 +28,6 @@ async def wait_random(max_delay: float = 10) -> float:
 
 
 if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    print(asyncio.run(wait_random()))
+    print(asyncio.run(wait_random(5)))
+    print(asyncio.run(wait_random(15)))
