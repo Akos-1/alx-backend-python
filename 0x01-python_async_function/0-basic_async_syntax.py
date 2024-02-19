@@ -10,6 +10,7 @@ import random
 
 random.seed(0)
 
+
 async def wait_random(max_delay: float = 10) -> float:
     """
     Asynchronous coroutine that waits for a random delay between 0
