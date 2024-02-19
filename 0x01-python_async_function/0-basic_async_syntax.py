@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
+import asyncio
+import random
 
 """
 This module defines an asynchronous coroutine wait_random that waits
 for a random delaybetween 0 and max_delay seconds (inclusive)
 and eventually returns it.
 """
-
-import asyncio
-import random
 
 # Set the random seed to ensure consistent output
 random.seed(0)
