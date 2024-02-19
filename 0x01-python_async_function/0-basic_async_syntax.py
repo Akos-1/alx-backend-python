@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-import asyncio
-import random
 
 """
 This module defines an asynchronous coroutine wait_random that waits
-for a random delaybetween 0 and max_delay seconds (inclusive)
+for a random delay between 0 and max_delay seconds (inclusive)
 and eventually returns it.
 """
 
-# Set the random seed to ensure consistent output
-random.seed(0)
+import asyncio
+import random
 
 
 async def wait_random(max_delay: float = 10) -> float:
@@ -30,7 +28,5 @@ async def wait_random(max_delay: float = 10) -> float:
 
 
 if __name__ == "__main__":
-    print(asyncio.run(wait_random()))
-    print(asyncio.run(wait_random(5)))
-    print(asyncio.run(wait_random(15)))
-
+    import doctest
+    doctest.testmod()
