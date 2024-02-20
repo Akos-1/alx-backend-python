@@ -6,8 +6,8 @@ and an asynchronous comprehension coroutine.
 """
 
 import asyncio
+import random
 from typing import AsyncGenerator, List
-from random import randint
 
 
 async def async_generator() -> 'async_generator':
