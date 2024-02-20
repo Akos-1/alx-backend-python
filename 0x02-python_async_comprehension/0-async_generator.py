@@ -22,6 +22,13 @@ async def async_generator() -> AsyncGenerator[int, None]:
         await asyncio.sleep(1)
         yield random.randint(0, 10)
 
+# Example usage:
+
+
+async def main():
+    async for number in async_generator():
+        print(number)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
