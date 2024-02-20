@@ -4,9 +4,10 @@
 This module defines an asynchronous generator coroutine
 and an asynchronous comprehension coroutine.
 """
+
 import asyncio
-from random import randint
 from typing import AsyncGenerator, List
+from random import randint
 
 
 async def async_generator() -> 'async_generator':
